@@ -1,0 +1,505 @@
+/* ===================================================
+   GEOMETRY DASH COLOR PALETTE & STYLES
+   =================================================== */
+:root {
+    --bg-dark: #0b0e14;          /* Dark Slate Background */
+    --bg-darker: #06080d;        /* Deep Space Grid Background */
+    --bg-card: #151a24;          /* Geometry Card Container */
+    --text-main: #f0f6fc;
+    --text-muted: #8b949e;
+    
+    /* Warna Ikonik Geometry Dash */
+    --gd-lime: #00ff44;          /* Stereo Madness / Green Portal */
+    --gd-cyan: #00e5ff;          /* Wave / Ship Glow Cyan */
+    --gd-pink: #ff0055;          /* Jump Pad Magenta/Pink */
+    --gd-yellow: #ffe600;        /* Coin / Yellow Orb */
+    
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.6;
+    /* Motif garis tipis khas background Geometry Dash */
+    background-image: 
+        linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Navbar Geometry Dash Style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(11, 14, 20, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid var(--gd-lime);
+    box-shadow: 0 4px 15px rgba(0, 255, 68, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.logo span {
+    color: var(--gd-lime);
+    text-shadow: 0 0 10px rgba(0, 255, 68, 0.6);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gd-cyan);
+    text-shadow: 0 0 8px var(--gd-cyan);
+}
+
+/* Section Styling */
+.section {
+    padding: 110px 8% 90px;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 8% 60px;
+    background: radial-gradient(circle at center, rgba(0, 255, 68, 0.08) 0%, rgba(11, 14, 20, 0.95) 75%);
+}
+
+.badge {
+    background: rgba(0, 255, 68, 0.1);
+    color: var(--gd-lime);
+    border: 2px solid var(--gd-lime);
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: 0 0 12px rgba(0, 255, 68, 0.3);
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 54px;
+    margin: 22px 0;
+    line-height: 1.2;
+}
+
+.neon-text {
+    color: var(--gd-cyan);
+    text-shadow: 0 0 18px var(--gd-cyan);
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: var(--text-muted);
+    font-size: 20px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Tombol Berwarna Khas Dash */
+.btn {
+    padding: 14px 30px;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: var(--gd-lime);
+    color: #000;
+    border: 2px solid var(--gd-lime);
+    box-shadow: 0 0 15px rgba(0, 255, 68, 0.4);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 68, 0.8);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--gd-cyan);
+    border: 2px solid var(--gd-cyan);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+.btn-outline:hover {
+    background: rgba(0, 229, 255, 0.15);
+    box-shadow: 0 0 20px var(--gd-cyan);
+    transform: translateY(-3px);
+}
+
+/* ===================================================
+   TENTANG SAYA (Pemisahan Teks & Foto Lingkaran)
+   =================================================== */
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Jarak antara Teks dan Foto terpisah */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cyber-card {
+    flex: 1.6;
+    background-color: var(--bg-card);
+    border: 2px solid var(--gd-pink);
+    border-radius: 8px;
+    padding: 35px;
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--gd-lime);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--gd-lime);
+}
+
+.card-label {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+}
+
+.cyber-card h3 {
+    font-size: 24px;
+    color: var(--gd-yellow);
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px rgba(255, 230, 0, 0.3);
+}
+
+.cyber-card p {
+    color: var(--text-main);
+    margin-bottom: 25px;
+}
+
+.about-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-title {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+}
+
+.info-value {
+    font-weight: 700;
+    color: var(--gd-cyan);
+}
+
+/* Bingkai Foto Lingkaran Geometri Glow */
+.profile-image-card {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-frame {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%; /* Bulat sempurna */
+    background: var(--bg-card);
+    border: 3px solid var(--gd-lime);
+    padding: 6px;
+    box-shadow: 0 0 20px rgba(0, 255, 68, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-frame:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--gd-lime);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===================================================
+   PROYEK & KEAHLIAN
+   =================================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    border: 2px solid rgba(0, 229, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gd-cyan);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+.project-img-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 22px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag-green, .tag-cyan, .tag-pink {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.tag-green { background: rgba(0, 255, 68, 0.12); color: var(--gd-lime); border: 1px solid var(--gd-lime); }
+.tag-cyan { background: rgba(0, 229, 255, 0.12); color: var(--gd-cyan); border: 1px solid var(--gd-cyan); }
+.tag-pink { background: rgba(255, 0, 85, 0.12); color: var(--gd-pink); border: 1px solid var(--gd-pink); }
+
+/* Skill Tags */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.skill-tag {
+    padding: 10px 22px;
+    border-radius: 6px;
+    background: var(--bg-card);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.skill-tag.green { border: 2px solid var(--gd-lime); color: var(--gd-lime); }
+.skill-tag.cyan { border: 2px solid var(--gd-cyan); color: var(--gd-cyan); }
+.skill-tag.pink { border: 2px solid var(--gd-pink); color: var(--gd-pink); }
+.skill-tag.yellow { border: 2px solid var(--gd-yellow); color: var(--gd-yellow); }
+
+/* Contact Form */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: var(--bg-card);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gd-lime);
+    box-shadow: 0 0 10px rgba(0, 255, 68, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+    color: var(--text-muted);
+    background-color: var(--bg-darker);
+}
+
+/* Responsif Mobile */
+@media (max-width: 868px) {
+    .about-wrapper {
+        flex-direction: column-reverse;
+        gap: 25px;
+    }
+
+    .image-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+/* ==========================================
+   EFEK ANIMASI INTERAKTIF JAVASCRIPT
+   ========================================== */
+
+/* 1. Navigasi Aktif */
+.nav-links a.active {
+    color: var(--gd-lime) !important;
+    text-shadow: 0 0 10px var(--gd-lime);
+    border-bottom: 2px solid var(--gd-lime);
+    padding-bottom: 4px;
+}
+
+/* 2. Efek Klik Neon Mouse */
+.click-glow {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gd-cyan);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 15px var(--gd-cyan);
+    animation: clickExpand 0.5s ease-out forwards;
+}
+
+@keyframes clickExpand {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}
+
+/* 3. Animasi Elemen Muncul Saat Di-scroll */
+.reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
